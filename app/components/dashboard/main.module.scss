@@ -1,3 +1,4 @@
+@use '../../../styles/variables' as *;
 .mainContent {
     width: 80%;
     margin: 0 auto; 
@@ -16,16 +17,58 @@
     padding: 0 10px 10px 10px;
 }
 
+
+.cardWrapper {
+   //flex: 1 0 21%; 
+   flex: 1 0 23.89%;
+  flex-grow: unset;
+}
+
 .card {
-    padding: 10px;
+    //padding: 10px 0 0 0;
     flex: 1 1 200px; 
     border: 1px solid #ccc; 
     border-radius: 8px; 
     background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  }
+}
+
+.petInfo {
+    padding: 20px;
+}
+
+.petInfo h3 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.petInfo p {
+
 }
 
 .petImage {
     width: 100%;
     height: 300px;
     position: relative;
+}
+
+
+.adoptMeBtn {
+    background-color: $success;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #5da35d;
+    }
 }

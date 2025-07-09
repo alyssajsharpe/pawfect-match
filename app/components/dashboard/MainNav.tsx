@@ -1,27 +1,39 @@
 import styles from './main.module.scss';
 import Image from 'next/image';
-import placeholderImg  from '../../../public/placeholder.png';
-let id = 0; // Update later 
+import placeholderImg  from '../../../public/placeholder2.png';
+import { TracingChannel } from 'diagnostics_channel';
+import Pet from '../../../types/types';
 
-export default function MainContent(){
+export default function MainContent({ pets }: { pets: Pet[]}) {
+
     return (
         <div className={styles.mainContent}>
             <div className={styles.mainContentContainer}>
                 <div className={styles.cardContainer}>
-                    <div className={styles.card}>
-                        <div className={styles.petImage}>
-                            <Image 
-                                src={placeholderImg}
-                                fill
-                                alt='Pet Image' 
-                            />
+                     {pets.map((pet) => (
+                        <div key={pet.id} className={styles.cardWrapper}>
+                            <div className={styles.card}>
+                                <a href={`/pets/${pet.id}`}>
+                                <div className={styles.petImage}>
+                                    <Image 
+                                        src={pet.image_url ?? placeholderImg}
+                                        fill
+                                        alt='Pet Image' 
+                                    />
+                                </div>
+                                <div className={styles.petInfo}>
+                                    <h3>{pet.name}</h3>
+                                    <p><strong>Age:</strong> {pet.age}</p>
+                                    <p><strong>Gender:</strong>  {pet.gender}</p>
+                                    <p><strong>Weight:</strong>  {pet.size}</p>
+                                </div>
+                                </a>
+                                <div className={styles.adoptMeBtn}>
+                                    <a href={`/pets/${pet.id}`}>More Info</a>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Pet Name</h4>
-                        <p>Age: </p>
-                        <p>Gender: </p>
-                        <p>Weight: </p>
-                        <a href={`/pet/${id}`}>Adopt me</a>
-                    </div>
+                    ))} 
                 </div>
           </div>
         </div>

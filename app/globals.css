@@ -23,6 +23,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
 }
 
 nav,
@@ -34,7 +36,7 @@ footer {
 
 nav {
   background-color: #ffff;
-  height: 44px;
+  height: 75px;
   text-align: center;
 
 }
@@ -55,4 +57,38 @@ footer {
   bottom: 0;
   text-align: center;
 
+}
+
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+  }
+
+
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }

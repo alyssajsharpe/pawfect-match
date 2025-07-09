@@ -1,0 +1,227 @@
+@use '../../../styles/variables' as *;
+
+.mainPetContent {
+    width: 100%;
+    padding: 40px;
+    @media screen and (max-width: 787px) {
+        padding: 20px;
+    }
+}
+
+.mainPetContentContainer {
+    //display: flex;
+}
+
+.petInfoContainer {
+    display: block;
+}
+
+.petIntro {
+    display: flex;
+    @media screen and (max-width: 787px) {
+        display: block;
+    }
+}
+
+.petInfo {
+    display: flex;
+    margin-top: 20px;
+    height: auto;
+    @media screen and (max-width: 787px) {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+.petImage {
+    width: 100%;
+    height: inherit;    
+    position: relative;
+}
+
+.petImage img {
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+    object-position: center;
+
+    @media screen and (max-width: 787px) {
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+
+.petIntroContainerLeft {
+    width: 70%;
+    height: 450px;
+
+    @media screen and (max-width: 787px) {
+        width: 100%;
+        height: 250px;
+    }
+}
+.petIntroContainerRight{
+    width: 30%;
+    background-color: $primary;
+    color: white;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+
+    
+    @media screen  and (max-width: 1230px) and (min-width: 787px){
+        width: 50%;
+    }
+
+    @media screen and (max-width: 787px) {
+        width: 100%;
+        height: auto;
+        border-radius:  0 0 8px 8px;
+    }
+}
+
+.petIntroContainerRight h1 {
+    text-align: center;
+}
+
+.returnBtn a {
+    color: $primary;
+    font-weight: 700;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.learnMoreBtn {
+    background-color: white;
+    color: $primary;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    width: 275px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    &:hover {
+        background-color: #f1f1f1;
+    }
+}
+
+.adoptionBtn {
+    background-color: $success;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    width: 275px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    
+    &:hover {
+        background-color: #5da35d;
+    }
+}
+
+.petInfoBtn {
+    background-color: $secondary;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 8px 0;
+
+    &:hover {
+        background-color: #3d515b;
+    }
+
+    @media screen and (max-width: 787px) {
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+.petInfocontainerLeft {
+    background-color: $secondary;
+    color: white;
+    width: 30%;
+    margin-right: 20px;
+    border-radius: 8px;
+    padding: 20px;
+
+    @media screen and (max-width: 787px) {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+.petInfocontainerLeft h1, .petInfocontainerLeft h4 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.petInfocontainerLeft h4 {
+    padding-bottom: 20px;
+}
+
+
+.petInfocontainerLeft p {
+    font-size: 18px;
+}
+
+.petInfocontainerRight {
+    background-color: white;
+    color: black;
+    width: 70%;
+    border-radius: 8px;
+    padding: 20px;
+
+    @media screen and (max-width: 787px) {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+.petInfocontainerRight h1 {
+    text-align: center;
+    margin-top: auto;
+}
+
+.petInfocontainerRight div {
+    padding-bottom: 20px;
+}
+
+.petBanner {
+    background-color: $success;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.petBanner h4 {
+    text-align: center;
+    font-size: 18px;
+}
+.petCarousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carouselCard {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    margin: 5px;
+}

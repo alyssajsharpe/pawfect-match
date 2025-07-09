@@ -1,10 +1,51 @@
+@use '../../../styles/variables' as *;
 .sideNav {
     width: 20%;  
-    // background-color: #f9f9f9;
-    // border: 1px solid #ccc; 
-    // border-radius: 8px; 
+    background-color: #f9f9f9;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
 }
 
 .sideNavContainer {
     padding: 20px;
+}
+
+.sideNavContainer h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter {
+    padding: 10px;
+}
+
+.filter label {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.filter select {
+    border: 2px solid grey;
+    border-radius: 8px;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.resetBtn {
+    background-color: $secondary;
+    width: 75px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: auto;
+    color: white;
+    margin-left: 10px;
+    
+    &:hover {
+        background-color: #3d515b;
+    }
+}
+
+.resetBtn button {
+    cursor: pointer;
 }
