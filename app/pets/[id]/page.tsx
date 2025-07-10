@@ -5,11 +5,12 @@ import styles from './pet.module.scss';
 import Image from 'next/image';
 import placeholderImg  from '../../../public/placeholder.png';
 import pool from '@/lib/db';
+import { notFound } from 'next/navigation';
 
-export default async function PetPage({ params }: { params: { id: string } }) {
-  
+export default async function PetPage({ params }: {params: Promise<{id: string}>}) {
+  try {
   // Grab pet info from db by url id 
-  const { id } = await params
+  const { id } = await params;
   const result = await pool.query<Pet>(
     'SELECT * FROM pets WHERE id = $1',
     [id]
@@ -97,4 +98,9 @@ export default async function PetPage({ params }: { params: { id: string } }) {
           </div>
         </div>
   );
+} catch (e){
+  console.log(e);
+}
+
+notFound();
 }
