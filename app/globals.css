@@ -92,3 +92,15 @@ p {
 .mb-20 {
   margin-bottom: 20px;
 }
+
+@media screen and (min-width: 787px){
+  .hide-on-mobile{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 787px){
+  .hide-on-mobile{
+    display: none;
+  }
+}

@@ -12,7 +12,7 @@ export default function Header() {
         <div className={styles.navContainer}>
             <div className={styles.logoNav}>
               <a href='/'>
-              <h2>Pawfect Match</h2>
+              <h2 className='hide-on-mobile'>Pawfect Match</h2>
               <Image 
                   src={logo ?? placeholderImg}
                   fill

@@ -5,4 +5,7 @@
 .dashboardContainer {
 display: flex;
   width: 100%;
+  @media screen and (max-width: 787px) {
+    display: block;
+  }
 }

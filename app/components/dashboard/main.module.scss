@@ -19,9 +19,20 @@
 
 
 .cardWrapper {
-   //flex: 1 0 21%; 
-   flex: 1 0 23.89%;
-  flex-grow: unset;
+    flex: 1 0 23.89%;
+    flex-grow: unset;
+    @media screen and (max-width: 1441px) {
+        flex: 1 0 32%;
+        flex-grow: unset;
+    }
+    @media screen and (max-width: 1090px) {
+        flex: 1 0 48%;
+        flex-grow: unset;
+    }
+     @media screen and (max-width: 787px) {
+        flex: 1 0 100%;
+        flex-grow: unset;
+    }
 }
 
 .card {
